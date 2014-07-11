@@ -6,7 +6,10 @@ import json
 from django.http import HttpResponse
 
 def search(request):
-	movies = Movie.objects.all()
+	try:
+		movies = Movie.objects.all()
+	except Movie.DoesNotExist as e:
+		print e
 	movie_names = []
 	for movie in movies:
 		movie_names.append(str(movie.name))
@@ -23,7 +26,10 @@ def search(request):
 			print "inside post"
 			return render_to_response('index.html',locals(),context_instance=RequestContext(request))
 	else:
-		movies = Movie.objects.all()
+		try:
+			movies = Movie.objects.all()
+		except Movie.DoesNotExist as e:
+			print e
 		movie_names = []
 		for movie in movies:
 			movie_names.append(str(movie.name))
