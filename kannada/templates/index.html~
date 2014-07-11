@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<!--
+	MegaCorp by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+<html>
+
+	<head>
+		<title>Kannada Movie Taglines</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        
+		
+		<!--<script src="/static/js/skel.min.js"></script>-->
+		<!--<script src="/static/js/skel-panels.min.js"></script>-->
+		<!--<script src="/static/js/init.js"></script>-->
+		
+  		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script  type="text/javascript" src="/static/js/typeahead.min.js"></script>
+		
+		
+			<link rel="stylesheet" href="/static/css/skel-noscript.css" />-->
+			<link rel="stylesheet" href="/static/css/style.css" />
+			<link rel="stylesheet" href="/static/css/style-desktop.css" />
+			<link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+			<link href="/static/css/typeahead.css" rel="stylesheet">
+
+			<script type="text/javascript">
+			
+	$(document).ready(function(){
+	$('input#id_movie_name').typeahead({
+		name: 'accounts',
+		local: {{ movie_name|safe }}
+		
+	});
+});  
+</script>
+<style type="text/css">
+.bs-example{
+	font-family: sans-serif;
+	position: relative;
+	margin: 100px;
+}
+#id_movie_name, .tt-query, .tt-hint {
+	border: 2px solid #CCCCCC;
+	border-radius: 8px;
+	font-size: 24px;
+	height: 30px;
+	line-height: 30px;
+	outline: medium none;
+	padding: 8px 12px;
+	width: 396px;
+}
+#id_movie_name {
+	background-color: #FFFFFF;
+	
+}
+label{
+	font-size : 30px;
+	color : white;
+}
+#id_movie_name:focus {
+	border: 2px solid #0097CF;
+}
+.tt-query {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+	color: #999999;
+	margin : 0 0 0 260px;
+}
+.tt-dropdown-menu {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 12px;
+	padding: 8px 0;
+	width: 422px;
+	margin : 0 0 0 260px;
+}
+.tt-suggestion {
+	font-size: 24px;
+	line-height: 24px;
+	padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+	background-color: #0097CF;
+	color: #FFFFFF;
+}
+.tt-suggestion p {
+	margin: 0;
+}
+</style>
+
+		</head>
+		
+	<body class="homepage">
+
+		<!-- Header -->
+		<div id="header-wrapper">
+		
+        	<div id="header" class="container">
+            	<div id="logo"><h1><a href="#">Kannada-Movie-Taglines ;)</a></h1></div>
+            </div>
+			
+			<div id="banner">
+				<div class="container">
+					<div class="row">
+						<section class="12u">
+							
+							<header>
+								<h2><b>Find your favourite movie taglines</b></h2>
+								<span class="byline">Adding that extra punchline below a film title has become mandatory in almost every film in Sandalwood. Many of us watch Kannada movies. But no one bothers to relate the movie with its TAGLINES. So here is a place where you can find your favourite and hilarious taglines.</span>
+							</header>
+							<form action = "." method = "POST">{% csrf_token %}
+							<div class="bs-example">
+        					{{ form.as_p }}
+    						</div>
+							<input type = "submit" class="button button-alt" value = "Get the Tagline">
+							</form>
+							<h2> {{ movie_description.name }} </h2>
+							<h2> {{ movie_description.tagline }} </h2>
+						</section>
+					</div>
+				</div>
+			</div>			
+
+		</div>
+		<!-- Header Ends Here -->
+
+		<!-- Featured Area -->
+			<div id="featured-wrapper">
+			
+				<div class="container">
+					<div class="row double">
+					
+                        <section class="4u">
+                           <header>
+	                           <h2>Maecenas luctus lectus</h2>
+                           </header>
+                            <span class="pennant"><span class="fa fa-apple"></span></span>
+                            <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo.</p>
+                            <a href="#" class="button button-style1">Read More</a>
+                        </section>
+                        <section class="4u">
+                            <header>
+	                            <h2>Etiam rhoncus volutpat</h2>
+                            </header>
+                            <span class="pennant"><span class="fa fa-rocket"></span></span>
+                            <p>Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna.</p>
+                            <a href="#" class="button button-style1">Read More</a>
+                        </section>
+                        <section class="4u">
+                            <header>
+	                            <h2>Mauris vulputate dolor</h2>
+                            </header>
+                            <span class="pennant"><span class="fa fa-cogs"></span></span>
+                            <p>Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat vel, suscipit in, mattis placerat, nulla. Sed ac leo.</p>
+                            <a href="#" class="button button-style1">Read More</a>
+                        </section>
+					
+					</div>
+				</div>
+				
+			</div>
+		
+		
+		<!-- Featured Ends Here -->
+
+		<!-- Page -->
+        
+        	<div id="page">
+            	<div class="container">
+                	<div class="row">
+                    
+                    	<div id="content" class="8u">
+                        	<article>
+                            	<header>
+                                    <h2>Praesent mattis condimentum</h2>
+                                </header>
+                                <a href="#" class="image-style1"><img src="images/pic01.jpg" alt=""></a>
+                                <p>This is <strong>MegaCorp</strong>, a responsive HTML5 site template freebie by <a href="http://templated.co">TEMPLATED</a>. Released for free under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so use it for whatever (personal or commercial) &ndash; just give us credit! Check out more of our stuff at <a href="http://templated.co">our site</a> or follow us on <a href="http://twitter.com/templatedco">Twitter</a>.</p>
+                                <a href="#" class="button button-style1">Read More</a>
+                            </article>
+                            <div id="two-column">
+                            	<div class="row">
+                                    <section class="6u">
+                                        <h2>Tristique eleifend</h2>
+                                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh.</p>
+                                        <ul class="style3">
+                                            <li class="first">
+                                                <p><span class="date"><a href="#">20012.10.25</a></span><span class="heading-title">Etiam posuere augue</span></p>
+                                                <p><a href="#">Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus.</a></p>
+                                            </li>
+                                            <li>
+                                                <p><span class="date"><a href="#">20012.10.25</a></span><span class="heading-title">Etiam posuere augue</span></p>
+                                                <p><a href="#">Quisque dictum. Integer nisl risus, sagittis elementum congue, nibh. Suspendisse dictum porta lectus.</a></p>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <section class="6u">
+                                        <h2>Donec dictum metus</h2>
+                                        <ul class="style4">
+                                            <li class="first">
+                                                <h3>Mauris vulputate dolor sit amet</h3>
+                                                <p><a href="#">Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
+                                            </li>
+                                            <li>
+                                                <h3>Fusce ultrices fringilla metus</h3>
+                                                <p><a href="#">In hac habitasse platea dictumst. Nullam id ante eget dui vulputate aliquam. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
+                                            </li>
+                                            <li>
+                                                <h3>Donec dictum metus in sapien</h3>
+                                                <p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Suspendisse sit amet tellus in eros bibendum condimentum.</a> </p>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    	<div id="sidebar" class="4u">
+                        	<div class="row">
+                                <section id="box1" class="6u">
+                                    <h2>Nulla  eleifend</h2>
+                                    <ul class="style4">
+                                        <li class="first"><a href="#">Maecenas luctus</a></li>
+                                        <li><a href="#">Etiam rhoncus erat</a></li>
+                                        <li><a href="#">Donec metus sapien</a></li>
+                                        <li><a href="#">Integer quis urna</a></li>
+                                        <li><a href="#">Etiam rhoncus erat</a></li>
+                                        <li><a href="#">Donec metus sapien</a></li>
+                                        <li><a href="#">Etiam volutpat erat</a></li>
+                                    </ul>
+                                </section>
+                                <section class="6u">
+                                    <h2>Nulla  eleifend</h2>
+                                    <ul class="style4">
+                                        <li class="first"><a href="#">Maecenas luctus</a></li>
+                                        <li><a href="#">Etiam rhoncus erat</a></li>
+                                        <li><a href="#">Donec metus sapien</a></li>
+                                        <li><a href="#">Integer quis urna</a></li>
+                                        <li><a href="#">Etiam rhoncus erat</a></li>
+                                        <li><a href="#">Donec metus sapien</a></li>
+                                        <li><a href="#">Etiam volutpat erat</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <section id="box2">
+                                <h2>Ipsum Consequat</h2>
+                                <ul class="style2">
+                                    <li class="first">
+                                        <p><a href="#"><img src="images/pics07.jpg" alt="">Pellentesque viverra vulputate enim. Aliquam erat volutpat. Donec leo, vivamus nibh in augue praesent congue rutrum. </a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#"><img src="images/pics08.jpg" alt="">Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo, vivamus fermentum augue praesent congue rutrum.</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#"><img src="images/pics09.jpg" alt="">Suspendisse sit amet tellus in eros bibendum condimentum. Donec leo, fermentum nibh in augue praesent a lacus congue rutrum. </a></p>
+                                    </li>
+                                    <li>
+                                        <p><a href="#"><img src="images/pics10.jpg" alt="">Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo, vivamus fermentum augue praesent congue rutrum.</a></p>
+                                    </li>
+                                </ul>
+                                <a href="#" class="button button-style1">Read More</a>
+                            </section>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            
+		<!-- /Page -->
+
+		<!-- Copyright -->
+            <div id="copyright" class="container">
+                Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+            </div>
+
+
+	</body>
+
+</html>
+
+

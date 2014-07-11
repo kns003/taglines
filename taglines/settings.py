@@ -92,6 +92,13 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+#template
+
+from os.path import join
+TEMPLATE_DIRS = (
+    join(BASE_DIR,  'templates'),
+)
+
 # Static asset configuration
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
